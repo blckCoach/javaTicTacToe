@@ -3,6 +3,10 @@ class Execute {
 		String[] playGround = new String[9];
 		PlayGround play = new PlayGround();
 		playGround = play.define(playGround);
-		play.output(playGround);
+        play.startGame();
+        while (true) {
+		    play.output(playGround);
+            playGround = play.moves(playGround);
+        }
 	}
 }
