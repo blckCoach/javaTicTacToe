@@ -1,12 +1,14 @@
-class Execute {
-	public static void main(String[] args) {
-		String[] playGround = new String[9];
-		PlayGround play = new PlayGround();
-		playGround = play.define(playGround);
-        play.startGame();
+public class Execute {
+    public static void main(String[] args) {
+        Game game= new Game();
+        game.define();
         while (true) {
-		    play.output(playGround);
-            playGround = play.moves(playGround);
+            try {
+               game.output();
+               game.move();
+            } catch (Exception e) {
+                System.out.println("Your input was not correct");
+            }
         }
-	}
+    }
 }
