@@ -1,2 +1,2 @@
 # javaTicTacToe
-A simple TicTacToe game
+A simple TicTacToe game with AI
